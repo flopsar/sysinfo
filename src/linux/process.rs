@@ -388,7 +388,8 @@ pub(crate) fn _get_process_data(
         // If we're getting information for a child, no need to get those info since we
         // already have them...
         p.cmd = proc_list.cmd.clone();
-        p.name = proc_list.name.clone();
+        //p.name = proc_list.name.clone();
+        p.name = name.into();
         p.environ = proc_list.environ.clone();
         p.exe = proc_list.exe.clone();
         p.cwd = proc_list.cwd.clone();
